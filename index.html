@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #eee;
+            min-height: 400px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-radius: 2px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            height: 100vh;
+        }
+        
+        input[type="number"] {
+            padding: 5px;
+            border-radius: 2px;
+            background: #fff;
+            border: 1px solid black;
+            outline: none;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        
+        select {
+            padding: 5px;
+            border-radius: 2px;
+            background: #fff;
+            border: 1px solid black;
+            outline: none;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        
+        button {
+            padding: 5px;
+            width: 200px;
+            border-radius: 2px;
+            background: #40E0D0;
+            border: 1px solid black;
+            outline: none;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            transition: 800ms ease;
+        }
+        
+        button:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>calculator</h1>
+        <input type="number" id="ope1" />
+        <select id="ope">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">X</option>
+      <option value="/">/</option>
+    </select>
+        <input type="number" id="ope2" />
+        <br><br>
+        <button onclick="test()">Get</button>
+    </div>
+
+</body>
+<script>
+    function test() {
+        var opee1 = document.getElementById("ope1").value;
+        var opee = document.getElementById("ope").value;
+        var opee2 = document.getElementById("ope2").value;
+        if (opee == '+') {
+            var test = parseInt(opee1) + parseInt(opee2);
+            alert(test);
+        }
+        if (opee == '-') {
+            var test = parseInt(opee1) - parseInt(opee2);
+            alert(test);
+        }
+        if (opee == '*') {
+            var test = parseInt(opee1) * parseInt(opee2);
+            alert(test)
+        }
+        if (opee == '/') {
+            var test = parseInt(opee1) / parseInt(opee2);
+            alert(test)
+        }
+    }
+</script>
+
+</html>
